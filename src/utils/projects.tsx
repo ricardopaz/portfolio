@@ -1,5 +1,7 @@
-interface Project {
-  from: string
+import { FiExternalLink, FiGithub } from "react-icons/fi"
+
+export interface Project {
+  from?: string
   href: string
   image?: string
   feature: string
@@ -18,8 +20,8 @@ export const highlightsProjects: Project[] = [
     description: (
       <>
         Esta calculadora foi desenvolvida em 2 projetos sendo eles escritos em React e Vue.js. 
-        Basicamente foi uma ferramenta criada para auxíliar nosso leads a entender o seu poder de compra de um imóvel e partindo daí nós indicamos imóveis baseado em seu resultado.
-        Ess calculadora foi criada para as 3 plataformas <a className="link" href="https://www.olx.com.br/financiamento-imoveis/calculadora-poder-compra" rel="noreferer" target="_blank">OLX</a>, <a className="link" href="https://zapimoveis.com.br/calculadora-poder-compra" rel="noreferer" target="_blank">ZAP</a> e <a className="link" href="https://calculadora.vivareal.com.br/" rel="noreferer" target="_blank">Viva</a>.
+        Basicamente é uma ferramenta criada para auxíliar os leads a entender o seu poder de compra de um imóvel e partindo do seu resultado é possível buscar imóveis com fit em seu perfil.
+        Essa calculadora foi criada para as 3 plataformas <a className="link" href="https://www.olx.com.br/financiamento-imoveis/calculadora-poder-compra" rel="noreferrer" target="_blank">OLX</a>, <a className="link" href="https://zapimoveis.com.br/calculadora-poder-compra" rel="noreferrer" target="_blank">ZAP</a> e <a className="link" href="https://calculadora.vivareal.com.br/" rel="noreferrer" target="_blank">Viva</a>.
       </>
     ),
     tecnologies: ['React', 'Vue.js', 'GraphQl', 'GA', 'GTM'],
@@ -46,11 +48,81 @@ export const highlightsProjects: Project[] = [
     href: 'https://creditz.vercel.app/',
     description: (
       <>
-        A CReditz é uma empresa que oferta produtos de crédito para o consumidor PF e além dessa página inicial criei Landing Pages para cada produto, com links nessa página inicial.
+        A Creditz é uma empresa que oferta produtos de crédito para o consumidor PF e além dessa página inicial criei Landing Pages para cada produto, com links nessa página inicial.
         O design foi terceirizado e fiz apenas o desenvolvimento das páginas, interações e integração com o CRM RD Station levando para lead para uma esteira de atendimento.
       </>
     ),
     tecnologies: ['Next.js', 'Next UI', 'Sass', 'TypeScript', 'GTM', 'RD Station API'],
     cta: { text: 'Visualizar', href: 'https://creditz.vercel.app/' }
   }
+]
+
+export const otherProjects: Project[] = [
+  {
+    feature: 'Portifólio',
+    href: 'https://github.com/ricardopaz/portfolio',
+    description: (
+      <>
+        Esse projeto é exatamente esta página que você está vendo, desenvolvi usando Next.js na versão 13.4 com Typescript e Tailwind Css. Baseado no design da Brittany Chiang.
+      </>
+    ),
+    tecnologies: ['Next.js', 'Typescript', 'Tailwind', 'Sass'],
+    links: [
+      { icon: <FiGithub />, href: 'https://github.com/ricardopaz/portfolio' },
+    ]
+  },
+  {
+    feature: 'Site MZI',
+    href: 'https://mzi-app.vercel.app/',
+    description: (
+      <>
+        Site criado para uma empresa de investimentos que buscava aumentar o posicionamento de marca e no meio digital e criamos essa LP para iniciar uma proposta de captação e orientação de leads para o mercado da empresa.
+      </>
+    ),
+    tecnologies: ['Next.js', 'Sass', 'Chakra', 'Typescript'],
+    links: [
+      { icon: <FiExternalLink />, href: 'https://mzi-app.vercel.app/' }
+    ]
+  },
+  {
+    feature: 'POC Editor',
+    href: 'https://github.com/ricardopaz/poc-editor',
+    description: (
+      <>
+        Essa POC foi desenvolvida para validar uma hipótese técnica ao implementar um editor com possibilidade de uso de tags fixas e autocomplete. A sua utilidade é voltada para criação de templates de documentos.
+      </>
+    ),
+    tecnologies: ['Vue.js', 'Quill.js'],
+    links: [
+      { icon: <FiGithub />, href: 'https://github.com/ricardopaz/poc-editor' },
+      { icon: <FiExternalLink />, href: 'https://poc-editor.vercel.app/' }
+    ]
+  },
+  {
+    feature: 'SympleCont',
+    href: 'https://symplecont-app.vercel.app/',
+    description: (
+      <>
+        Uma projeto que iniciei junto a um parceiro da área contábil no intúito de criarmos um sistema voltado para a gestão financeira de pequenas empresas. 
+      </>
+    ),
+    tecnologies: ['Next.js', 'Chakra', 'Sass', 'Typescript'],
+    links: [
+      { icon: <FiExternalLink />, href: 'https://symplecont-app.vercel.app/' }
+    ]
+  },
+  {
+    feature: 'Loja Oficial - Zap Imóveis',
+    href: 'https://www.zapimoveis.com.br/imobiliaria/109155',
+    description: (
+      <>
+        Lojas oficiais nada mais é do que um perfil com mais detalhe para as imobiliárias anunciantes do portal Zap Imóveis. 
+        Essa feature vem com a proposta de agregar mais valor aos produtos (SVAs) e posicionar mais as imobs em mecanismos de busca.
+      </>
+    ),
+    tecnologies: ['Vue.js', 'Vuex', 'GraphQl', 'Sass'],
+    links: [
+      { icon: <FiExternalLink />, href: 'https://www.zapimoveis.com.br/imobiliaria/109155' }
+    ]
+  },
 ]

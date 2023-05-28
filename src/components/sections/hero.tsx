@@ -9,9 +9,9 @@ const Hero = () => {
       <p className="text-lightSlate mt-5 max-w-[540px]">
         Sou especialista em construção de interfaces intuitivas, com design robustos, interativos e acessíveis. 
         Atualmente trabalho como <span className="text-green">Senior Front-end Developer</span> na OLX Brasil (maior grupo de anúncios do Brasil) atuando nos portais
-        <a href="https://olx.com" target="_blank" rel="noreferrer" className="text-green ml-1">OLX</a>,
-        <a href="https://zapimoveis.com" target="_blank" rel="noreferrer" className="text-green ml-1">Zap Imóveis</a> e
-        <a href="https://vivareal.com" target="_blank" rel="noreferrer" className="text-green ml-1">Vivareal</a>.
+        <a href="https://olx.com" target="_blank" rel="noreferrer" className="link ml-1">OLX</a>,
+        <a href="https://zapimoveis.com" target="_blank" rel="noreferrer" className="link ml-1">Zap Imóveis</a> e
+        <a href="https://vivareal.com" target="_blank" rel="noreferrer" className="link ml-1">Vivareal</a>.
       </p>
 
       <a href="https://linkedin.com/in/ricardopdsf" target="_blank" rel="noreferrer" className="btn-primary btn-lg mt-[50px]">

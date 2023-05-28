@@ -1,9 +1,15 @@
+'use client';
+
 import Image from 'next/image'
 import SectionContainer from '../section-container'
 
-import { highlightsProjects } from '../../utils/projects'
+import { Project, highlightsProjects } from '../../utils/projects'
 
-const Builded = () => {
+const HighlightsProjects = () => {
+  const openProject = (project: Project) => {
+    window.open(project.href, '_blank')
+  }
+
   return (
     <SectionContainer number="03" title="Algumas coisas que construi">
       <ul className="flex flex-col w-full gap-20 mt-12">
@@ -30,21 +36,24 @@ const Builded = () => {
                   <ul className="flex text-lightSlate text-xs gap-4">
                      {project.links.map((link, indexLink) => (
                         <li key={`link-${index}-${indexLink}`}>
-                          <a href={link.href} rel="noreferer" target="_blank">{link.icon}</a>
+                          <a href={link.href} rel="noreferrer" target="_blank">{link.icon}</a>
                         </li>
                      ))}
                   </ul>
                 )}
                 
                 {project.cta && (
-                  <a className="flex btn-primary w-max" href={project.cta.href} rel="noreferer" target="_blank">
+                  <a className="flex btn-primary w-max" href={project.cta.href} rel="noreferrer" target="_blank">
                     {project.cta.text}
                   </a>
                 )}
               </div>
   
               <div className={`flex items-center relative [grid-area:1/6/-1/-1] ${isOdd && '!col-[1/8]'} z-[1] w-full h-full`}>
-                <div className="group w-full relative bg-green rounded-lg shadow-[0_10px_30px_-10px_rgba(2,12,27,0.7)] cursor-pointer duration-300 before:w-full before:h-full before:rounded-lg before:absolute before:duration-300 before:top-0 before:left-0 before:bg-navy before:mix-blend-screen">
+                <div 
+                  onClick={() => openProject(project)}
+                  className="group w-full relative bg-green rounded-lg shadow-[0_10px_30px_-10px_rgba(2,12,27,0.7)] cursor-pointer duration-300 before:w-full before:h-full before:rounded-lg before:absolute before:duration-300 before:top-0 before:left-0 before:bg-navy before:mix-blend-screen"
+                >
                   <Image
                     fill
                     src={project.image} 
@@ -61,4 +70,4 @@ const Builded = () => {
   )
 }
 
-export default Builded
+export default HighlightsProjects

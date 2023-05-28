@@ -101,7 +101,7 @@ const Works = () => {
                       {work.role} 
                       <a 
                         href={work.href} 
-                        rel="noreferer" 
+                        rel="noreferrer" 
                         target="_blank"
                         className="link ml-2"
                       >
