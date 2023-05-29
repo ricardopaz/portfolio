@@ -5,7 +5,7 @@ const stacks = ['JavaScript (ES6+)', 'React', 'Next.js', 'Node.js', 'Vue.js', 'T
 
 const About = () => {
   return (
-    <SectionContainer number="01" title="Sobre">
+    <SectionContainer id="about" number="01" title="Sobre">
       <div className="grid grid-cols-[3fr_2fr] gap-14 mt-12">
         <div className="flex flex-col gap-4 text-md text-lightSlate">
           <p>

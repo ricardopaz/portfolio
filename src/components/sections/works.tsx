@@ -59,7 +59,7 @@ const Works = () => {
   };
   
   return (
-    <SectionContainer number="02" title="Onde trabalhei">
+    <SectionContainer id="works" number="02" title="Onde trabalhei">
       <div className="grid grid-cols-[1fr,4fr] w-full mt-12">
         <div className="grid col-span-1 relative auto-rows-max" onKeyDown={e => onKeyDown(e)}>
           {works.map((work, index) => {

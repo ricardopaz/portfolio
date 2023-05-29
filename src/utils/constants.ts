@@ -14,3 +14,10 @@ export const KEY_CODES = {
   SPACE_IE11: 'Spacebar',
   ENTER: 'Enter',
 };
+
+export const menuItems = [
+  { label: 'Sobre', href: '#about' },
+  { label: 'Experiência', href: '#works' },
+  { label: 'Projetos', href: '#projects' },
+  { label: 'Contato', href: '#contact' },
+]

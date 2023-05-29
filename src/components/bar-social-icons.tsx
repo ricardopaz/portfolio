@@ -8,7 +8,7 @@ const links = [
 
 const SocialIcons = () => {
   return (
-    <div className="w-[40px] fixed bottom-0 left-[40px] after:block after:w-[1px] after:h-[90px] after:mx-auto after:bg-lightSlate">
+    <div className="w-[40px] fixed bottom-0 left-[40px] max-[1080px]:left-[20px] after:block after:w-[1px] after:h-[90px] after:mx-auto after:bg-lightSlate max-[768px]:hidden">
       <ul className="flex flex-col gap-8 items-center m-0 p-0 list-none mb-8">
         {links.map((link, index) => (
           <li key={`social-link-${index}`}>

@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section className="flex flex-col items-center justify-center py-[100px] mx-[100px]">
+    <section id="contact" className="flex flex-col items-center justify-center py-[100px] mx-[100px]">
       <p className="max-w-md text-center font-mono font-thin text-lg text-green mb-2">
         04. Qual será o próximo?
       </p>

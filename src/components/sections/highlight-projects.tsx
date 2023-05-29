@@ -11,7 +11,7 @@ const HighlightsProjects = () => {
   }
 
   return (
-    <SectionContainer number="03" title="Algumas coisas que construi">
+    <SectionContainer id="projects" number="03" title="Algumas coisas que construi">
       <ul className="flex flex-col w-full gap-20 mt-12">
         {highlightsProjects.map((project, index) => {
           const isOdd = index % 2 === 0
