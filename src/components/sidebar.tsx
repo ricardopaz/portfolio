@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { menuItems } from '../utils/constants'
 import { aside, hamburgerButton } from '../styles/variants/sidebar'
 
@@ -12,6 +13,10 @@ const SideBar = () => {
 
   return (
     <div className="hidden max-[768px]:block">
+      <Helmet>
+        <body className={isOpen ? 'blured' : ''} />
+      </Helmet>
+
       <button className={button()} onClick={() => setOpen(!isOpen)}>
         <div className={box()}>
           <div className={inner()} />

@@ -6,7 +6,7 @@ const stacks = ['JavaScript (ES6+)', 'React', 'Next.js', 'Node.js', 'Vue.js', 'T
 const About = () => {
   return (
     <SectionContainer id="about" number="01" title="Sobre">
-      <div className="grid grid-cols-[3fr_2fr] gap-14 mt-12">
+      <div className="grid grid-cols-[3fr_2fr] gap-14 mt-12 max-[768px]:grid-cols-1 max-[768px]:justify-items-center max-[768px]:items-center">
         <div className="flex flex-col gap-4 text-md text-lightSlate">
           <p>
             Olá! Me chamo Ricardo Paz, moro em Recife/PE no Brasil. Em 2012 descobri que eu gostava de resolver problemas, sim, de qualquer tipo.
@@ -35,7 +35,7 @@ const About = () => {
           </ul>
         </div>
 
-        <div className="relative max-w-[300px]">
+        <div className="relative max-w-[300px] max-[768px]:w-[70%]">
           <div className="group relative bg-green rounded-lg shadow-[0_10px_30px_-10px_rgba(2,12,27,0.7)] hover:-translate-x-1 hover:-translate-y-1 duration-300 before:w-full before:h-full before:rounded-lg before:absolute before:duration-300 before:top-0 before:left-0 before:bg-navy before:mix-blend-screen after:w-full after:h-full after:rounded-lg after:absolute after:duration-300 after:top-[14px] after:left-[14px] after:border-[2px] after:border-green after:z-[-1] hover:after:translate-x-[8px] hover:after:translate-y-[8px]">
             <Image 
               width={300} 

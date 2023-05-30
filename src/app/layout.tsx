@@ -18,13 +18,15 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       </head>
 
-      <body className={`bg-navy ${firaSans.variable} ${firaCode.variable}`}>
-        <Header />
-        <main className="text-white">
-          <BarSocialIcons />
-          {children}
-          <BarEmail />
-        </main>
+      <body className="" data-react-helmet="class">
+        <div className={`${firaSans.variable} ${firaCode.variable}`}>
+          <Header />
+          <main className="text-white">
+            <BarSocialIcons />
+            {children}
+            <BarEmail />
+          </main>
+        </div>
       </body>
     </html>
   )

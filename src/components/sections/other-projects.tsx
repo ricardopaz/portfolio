@@ -9,7 +9,7 @@ const OtherProjects = () => {
   }
 
   return (
-    <section className="flex flex-col items-center py-[100px] mx-[100px]">
+    <section className="flex flex-col items-center py-[100px] max-[768px]:py-[80px] max-[480px]:py-[60px]">
       <h1 className="text-3xl text-lightestSlate font-bold mb-2">
         Outros projetos
       </h1>
@@ -18,7 +18,7 @@ const OtherProjects = () => {
         Portanto espero que curta o que tenho disponível.
       </p>
 
-      <div className="grid grid-cols-3 gap-[15px]">
+      <div className="grid grid-cols-3 gap-[15px] max-[1080px]:grid-cols-2 max-[480px]:grid-cols-1">
         {otherProjects.map((project, index) => (
           <div 
             key={`other-project-${index}`}
@@ -28,7 +28,7 @@ const OtherProjects = () => {
             <div className="flex justify-between items-center mb-[35px]">
               <FiFolder className="w-[40px] h-[40px] text-green" />
               {project.links?.length > 0 && (
-                <ul className="flex gap-4 text-lightSlate text-xl">
+                <ul className="flex gap-x-4 flex-wrap text-lightSlate text-xl">
                   {project.links.map((link, indexLink) => (
                     <li key={`link-${index}-${indexLink}`}>
                       <a className="hover:text-green hover:-translate-y-1 duration-200" href={link.href} target="_blank" rel="noreferrer">
@@ -44,7 +44,7 @@ const OtherProjects = () => {
             <p className="text-[17px text-lightSlate">{project.description}</p>
 
             {project.tecnologies?.length > 0 && (
-              <ul className="flex gap-4 font-mono text-xs text-lightSlate mt-[20px] items-end">
+              <ul className="flex gap-x-4 flex-wrap font-mono text-xs text-lightSlate mt-[20px] items-end">
                 {project.tecnologies.map((tech, indexTech) => (
                   <li key={`tech-${index}-${indexTech}`}>{tech}</li>
                 ))}

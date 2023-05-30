@@ -4,6 +4,14 @@
 
 html {
   scroll-behavior: smooth;
+
+  body {
+    @apply bg-navy;
+    
+    &.blured main {
+      @apply blur;
+    }
+  }
 }
 
 svg {

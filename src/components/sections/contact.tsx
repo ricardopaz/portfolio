@@ -1,10 +1,10 @@
 const Contact = () => {
   return (
-    <section id="contact" className="flex flex-col items-center justify-center py-[100px] mx-[100px]">
+    <section id="contact" className="flex flex-col items-center justify-center py-[100px]">
       <p className="max-w-md text-center font-mono font-thin text-lg text-green mb-2">
         04. Qual será o próximo?
       </p>
-      <h1 className="text-6xl text-lightestSlate font-bold mb-4">
+      <h1 className="text-[clamp(28px,5vw,70px)] text-lightestSlate font-bold mb-4">
         Entre em Contato
       </h1>
       <p className="max-w-lg text-center font-mono text-base text-lightestSlate mb-16">
