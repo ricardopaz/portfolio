@@ -1,19 +1,31 @@
 'use client';
 
-import { FiFolder } from 'react-icons/fi';
+import { FiFolder } from 'react-icons/fi'
+import { useEffect, useRef } from 'react'
+import sr, { srConfig } from '../../utils/sr'
 import { Project, otherProjects } from '../../utils/projects'
 
 const OtherProjects = () => {
+  const revealtitle = useRef(null);
+  const revealMessage = useRef(null);
+  const revealProjects = useRef([]);
+
+  useEffect(() => {
+    sr.reveal(revealtitle.current, srConfig());
+    sr.reveal(revealMessage.current, srConfig());
+    revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
+  }, []);
+
   const openProject = (project: Project) => {
     window.open(project.href, '_blank')
   }
 
   return (
     <section className="flex flex-col items-center py-[100px] max-[768px]:py-[80px] max-[480px]:py-[60px]">
-      <h1 className="text-3xl text-lightestSlate font-bold mb-2">
+      <h1 className="text-3xl text-lightestSlate font-bold mb-2" ref={revealtitle}>
         Outros projetos
       </h1>
-      <p className="max-w-md text-center font-mono text-xs text-green mb-16">
+      <p className="max-w-md text-center font-mono text-xs text-green mb-16" ref={revealMessage}>
         Gostaria de trazer todos os projetos, mas como sabemos o mercado nem sempre nos dar permissão para divulgação do trabalho realizado.
         Portanto espero que curta o que tenho disponível.
       </p>
@@ -23,6 +35,7 @@ const OtherProjects = () => {
           <div 
             key={`other-project-${index}`}
             onClick={() => openProject(project)}
+            ref={el => (revealProjects.current[index] = el)}
             className="group grid col-span-1 py-8 px-7 bg-lightNavy shadow-[0_10px_30px_-10px_rgba(2,12,27,0.7)] rounded-lg duration-200 hover:-translate-y-2 cursor-pointer"
           >
             <div className="flex justify-between items-center mb-[35px]">

@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.14",
+    "animejs": "^3.2.1",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.3",
     "next": "13.4.3",
@@ -17,6 +19,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.8.0",
     "react-transition-group": "^4.4.5",
+    "scrollreveal": "^4.0.9",
     "tailwind-variants": "^0.1.5"
   },
   "devDependencies": {

@@ -3,9 +3,18 @@
 import Image from 'next/image'
 import SectionContainer from '../section-container'
 
+import { useEffect, useRef } from 'react';
+import sr, { srConfig } from '../../utils/sr';
 import { Project, highlightsProjects } from '../../utils/projects'
 
 const HighlightsProjects = () => {
+  const revealProjects = useRef([]);
+
+  useEffect(() => {
+    revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
+  }, []);
+
+
   const openProject = (project: Project) => {
     window.open(project.href, '_blank')
   }
@@ -17,7 +26,11 @@ const HighlightsProjects = () => {
           const isOdd = index % 2 === 0
 
           return (
-            <li key={`highlight-project-${index}`} className="relative grid grid-cols-12 gap-[10px] items-center">
+            <li 
+              key={`highlight-project-${index}`} 
+              ref={el => (revealProjects.current[index] = el)}
+              className="relative grid grid-cols-12 gap-[10px] items-center"
+            >
               <div className={`
                 flex flex-col relative [grid-area:1/1/-1/7] ${isOdd && '!col-[7/-1] text-right items-end'} gap-6
                 max-[768px]:!col-[1/-1] max-[768px]:p-[40px] max-[768px]:flex max-[768px]:justify-center max-[768px]:h-full max-[768px]:z-[5] max-[768px]:text-left max-[768px]:items-start

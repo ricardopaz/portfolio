@@ -10,7 +10,7 @@ const Footer = () => {
         <a href="https://nextjs.org/" target="_blank" rel="noreferrer" className="relative w-[80px] h-[40px]">
           <Image fill src="/nextjs-white-logo.svg" alt="logomarca do next.js" />
         </a>
-        <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer" className="relative w-[130px] h-[20px]">
+        <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer" className="relative w-[130px] h-[16px]">
           <Image fill src="/tailwindcss-logo.svg" alt="logomarca do next.js" />
         </a>
       </div>
