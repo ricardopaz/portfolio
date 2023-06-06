@@ -68,7 +68,7 @@ export const otherProjects: Project[] = [
     ),
     tecnologies: ['Next.js', 'Typescript', 'Tailwind', 'Sass'],
     links: [
-      { icon: <FiGithub />, href: 'https://github.com/ricardopaz/portfolio' },
+      { icon: <FiGithub className="w-[20px] h-[20px]" />, href: 'https://github.com/ricardopaz/portfolio' },
     ]
   },
   {
@@ -81,7 +81,7 @@ export const otherProjects: Project[] = [
     ),
     tecnologies: ['Next.js', 'Sass', 'Chakra', 'Typescript'],
     links: [
-      { icon: <FiExternalLink />, href: 'https://mzi-app.vercel.app/' }
+      { icon: <FiExternalLink className="w-[20px] h-[20px]" />, href: 'https://mzi-app.vercel.app/' }
     ]
   },
   {
@@ -94,8 +94,8 @@ export const otherProjects: Project[] = [
     ),
     tecnologies: ['Vue.js', 'Quill.js'],
     links: [
-      { icon: <FiGithub />, href: 'https://github.com/ricardopaz/poc-editor' },
-      { icon: <FiExternalLink />, href: 'https://poc-editor.vercel.app/' }
+      { icon: <FiGithub className="w-[20px] h-[20px]" />, href: 'https://github.com/ricardopaz/poc-editor' },
+      { icon: <FiExternalLink className="w-[20px] h-[20px]" />, href: 'https://poc-editor.vercel.app/' }
     ]
   },
   {
@@ -108,7 +108,7 @@ export const otherProjects: Project[] = [
     ),
     tecnologies: ['Next.js', 'Chakra', 'Sass', 'Typescript'],
     links: [
-      { icon: <FiExternalLink />, href: 'https://symplecont-app.vercel.app/' }
+      { icon: <FiExternalLink className="w-[20px] h-[20px]" />, href: 'https://symplecont-app.vercel.app/' }
     ]
   },
   {
@@ -122,7 +122,7 @@ export const otherProjects: Project[] = [
     ),
     tecnologies: ['Vue.js', 'Vuex', 'GraphQl', 'Sass'],
     links: [
-      { icon: <FiExternalLink />, href: 'https://www.zapimoveis.com.br/imobiliaria/109155' }
+      { icon: <FiExternalLink className="w-[20px] h-[20px]" />, href: 'https://www.zapimoveis.com.br/imobiliaria/109155' }
     ]
   },
 ]
