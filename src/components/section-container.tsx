@@ -1,7 +1,7 @@
 'use client';
 
+import { srConfig } from '../utils/sr'
 import { useEffect, useRef } from 'react'
-import sr, { srConfig } from '../utils/sr'
 
 interface SectionContainerProps {
   id?: string
@@ -14,6 +14,8 @@ const SectionContainer = ({ id, number, title, children }: SectionContainerProps
   const revealContainer = useRef(null);
 
   useEffect(() => {
+    const ScrollReveal = require('scrollreveal');
+    const sr = ScrollReveal.default();
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 

@@ -2,7 +2,7 @@
 
 import { FiFolder } from 'react-icons/fi'
 import { useEffect, useRef } from 'react'
-import sr, { srConfig } from '../../utils/sr'
+import { srConfig } from '../../utils/sr'
 import { Project, otherProjects } from '../../utils/projects'
 
 const OtherProjects = () => {
@@ -11,6 +11,8 @@ const OtherProjects = () => {
   const revealProjects = useRef([]);
 
   useEffect(() => {
+    const ScrollReveal = require('scrollreveal');
+    const sr = ScrollReveal.default();
     sr.reveal(revealtitle.current, srConfig());
     sr.reveal(revealMessage.current, srConfig());
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));

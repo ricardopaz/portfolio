@@ -4,13 +4,15 @@ import Image from 'next/image'
 import SectionContainer from '../section-container'
 
 import { useEffect, useRef } from 'react';
-import sr, { srConfig } from '../../utils/sr';
+import { srConfig } from '../../utils/sr';
 import { Project, highlightsProjects } from '../../utils/projects'
 
 const HighlightsProjects = () => {
   const revealProjects = useRef([]);
 
   useEffect(() => {
+    const ScrollReveal = require('scrollreveal');
+    const sr = ScrollReveal.default();
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
 

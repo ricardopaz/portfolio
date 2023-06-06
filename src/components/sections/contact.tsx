@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react'
-import sr, { srConfig } from '../../utils/sr'
+import { srConfig } from '../../utils/sr'
 
 const Contact = () => {
   const revealtitle = useRef(null);
@@ -10,6 +10,8 @@ const Contact = () => {
   const revealcta = useRef(null);
 
   useEffect(() => {
+    const ScrollReveal = require('scrollreveal');
+    const sr = ScrollReveal.default();
     sr.reveal(revealtitle.current, srConfig());
     sr.reveal(revealsubtitle.current, srConfig());
     sr.reveal(revealmessage.current, srConfig());
