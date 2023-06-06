@@ -69,9 +69,9 @@ const Header = () => {
             </button>
           </FadeDown>
         </div>
+        
+        <SideBar />
       </Transition>
-
-      <SideBar />
     </>
   )
 }
