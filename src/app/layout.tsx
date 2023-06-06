@@ -7,34 +7,11 @@ import Header from '../components/header';
 import BarEmail from '../components/bar-email';
 import BarSocialIcons from '../components/bar-social-icons';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { firaCode, firaSans } from '../utils/fonts';
 
-// export const metadata = {
-//   title: 'Ricardo Paz | Web & Mobile developer',
-//   description: 'Hello! I\'m Ricardo, a Software Developer based in Recife/PE, Brazil. I enjoy creating beautiful and reliable applications for internet and phones. My goal is to always build scalable products and performant experiences.',
-// }
-
 export default function RootLayout({ children }) {
-  const isBrowser = typeof window !== `undefined`;
   const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    if (isLoading || !isBrowser) {
-      return;
-    }
-
-    if (window.location.hash) {
-      const id = window.location.hash.substring(1); // location.hash without the '#'
-      setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) {
-          el.scrollIntoView();
-          el.focus();
-        }
-      }, 0);
-    }
-  }, [isLoading]);
 
   const handleFinish = () => setIsLoading(false);
   
