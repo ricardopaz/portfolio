@@ -1,3 +1,5 @@
+export const GA_TRACKING_ID = 'G-L0W8BJZCT7';
+
 export const KEY_CODES = {
   ARROW_LEFT: 'ArrowLeft',
   ARROW_LEFT_IE11: 'Left',

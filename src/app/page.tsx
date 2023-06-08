@@ -1,14 +1,19 @@
 'use client';
 
 import Head from "next/head";
+import * as gtag from '../utils/gatag';
 import Hero from "../components/sections/hero";
-import Loader from "../components/loader";
 import About from "../components/sections/about";
 import Works from "../components/sections/works";
 import Footer from "../components/sections/footer";
 import Contact from "../components/sections/contact";
 import OtherProjects from "../components/sections/other-projects";
 import HighlightsProjects from "../components/sections/highlight-projects";
+
+import { Router } from "next/router";
+
+// Notice how we track pageview when route is changed
+Router.events.on('routeChangeComplete', (url) => gtag.pageview(url));
 
 export default function Home() { 
   return (
